@@ -15,7 +15,7 @@ class accesos_VI
               <meta http-equiv="X-UA-Compatible" content="IE=edge">
               <meta name="viewport" content="width=device-width, initial-scale=1">
               <link rel="icon" href="30.png"  />
-              <title>tienda telefonos</title>
+              <title>tienda telefonos prueba</title>
 
               <!-- Bootstrap -->
             
