@@ -284,7 +284,9 @@ class salida_VI
                             document.querySelector('#fecha_salida_' + consecutivo_salida).value = fecha_salida;
                             document.querySelector('#id_usuario' + consecutivo_salida).value = id_usuario;
                             
-                        
+                            $.post('salida_VI/agregarSalida', function(respuesta) {
+                          $('#contenido').html(respuesta);
+                           });
                             toastr.success(respuesta.mensaje);
 
                         } else if (respuesta.estado = 'ERROR') {

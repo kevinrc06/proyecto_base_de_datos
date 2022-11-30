@@ -227,6 +227,10 @@ function agregardetalle_salida() {
              document.querySelector('#lista_detalle_salida').insertAdjacentHTML('afterbegin', fila);
              
              document.querySelector('#formulario_agregar_detalle_salida ').reset();
+
+             $.post('detalle_salida_VI/agregarDetalle_salida', function(respuesta) {
+                          $('#contenido').html(respuesta);
+                           });
              toastr.success(respuesta.mensaje);
          } else if (respuesta.estado = 'ERROR') {
 
@@ -336,7 +340,11 @@ function agregardetalle_salida() {
                             document.querySelector('#precio_td_' + ordinal_salida+consecutivo_salida).innerHTML = precio;
                             document.querySelector('#precio_' + ordinal_salida+consecutivo_salida).value = precio;
                             document.querySelector('#id_producto' + ordinal_salida+consecutivo_salida).value = id_producto;
-                            
+                             
+
+                            $.post('detalle_salida_VI/agregarDetalle_salida', function(respuesta) {
+                          $('#contenido').html(respuesta);
+                           });
                         
                             toastr.success(respuesta.mensaje);
 

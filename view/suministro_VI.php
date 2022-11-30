@@ -163,7 +163,7 @@ class suministro_VI
                                             <input type="hidden" id="id_proveedor<?php echo $id_suministro; ?>" value="<?php echo $id_proveedor; ?>">
 
                                             <i class="fas fa-edit" data-toggle="modal" data-target="#Ventana_Modal" style="cursor: pointer;" onclick="verActualizarsuministro('<?php echo $id_suministro; ?>')"></i>
-                                            <i class="fas fa-trash" style="cursor: pointer;" onclick="showDelateUser('<?php echo $id_suministro; ?>')"></i>
+                                            <i class="fas fa-trash" style="cursor: pointer;" onclick="showDelateUser('<?php echo $id_suministro; ?>',this)"></i>
                                         </td>
                                     </tr>
                             <?php
@@ -183,7 +183,7 @@ class suministro_VI
         
         <script>
 
-    function showDelateUser(id){
+    function showDelateUser(id,e){
       Swal.fire({
       icon: "info",
       title: "!! REALMENTE DESEA ELIMINAR ESTE USUARIO  ¡¡",
@@ -214,6 +214,7 @@ class suministro_VI
           showConfirmButton: false,
           timer: 1500,
         });
+        e.closest("tr").remove();
       } else {
         Swal.fire({
           icon: "error",
@@ -411,7 +412,11 @@ class suministro_VI
                             document.querySelector('#fecha_' + id_suministro).value = fecha;
                             document.querySelector('#id_producto' + id_suministro).value = id_proveedor;
                             document.querySelector('#id_proveedor' + id_suministro).value = id_proveedor;
-                            
+                             
+
+                            $.post('suministro_VI/agregarSuministro', function(respuesta) {
+                          $('#contenido').html(respuesta);
+                           });
                         
                             toastr.success(respuesta.mensaje);
 

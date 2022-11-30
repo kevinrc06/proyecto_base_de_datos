@@ -284,7 +284,9 @@ class entrada_VI
                             document.querySelector('#fecha_entrada_' + consecutivo_entrada).value = fecha_entrada;
                             document.querySelector('#id_usuario' + consecutivo_entrada).value = id_usuario;
                             
-                        
+                            $.post('entrada_VI/agregarEntrada', function(respuesta) {
+                          $('#contenido').html(respuesta);
+                           });
                             toastr.success(respuesta.mensaje);
 
                         } else if (respuesta.estado = 'ERROR') {

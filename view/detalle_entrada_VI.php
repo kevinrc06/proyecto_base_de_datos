@@ -227,6 +227,9 @@ class detalle_entrada_VI
                             document.querySelector('#lista_detalle_entrada').insertAdjacentHTML('afterbegin', fila);
                             
                             document.querySelector('#formulario_agregar_detalle_entrada ').reset();
+                            $.post('detalle_entrada_VI/agregarDetalle_entrada', function(respuesta) {
+                          $('#contenido').html(respuesta);
+                           });
                             toastr.success(respuesta.mensaje);
                         } else if (respuesta.estado = 'ERROR') {
 
@@ -334,7 +337,9 @@ class detalle_entrada_VI
                             document.querySelector('#precio_' + ordinal_entrada+consecutivo_entrada).value = precio;
                             document.querySelector('#id_producto' + ordinal_entrada+consecutivo_entrada).value = id_producto;
                             
-                        
+                            $.post('detalle_entrada_VI/agregarDetalle_entrada', function(respuesta) {
+                          $('#contenido').html(respuesta);
+                           });
                             toastr.success(respuesta.mensaje);
 
                         } else if (respuesta.estado = 'ERROR') {

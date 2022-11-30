@@ -402,7 +402,9 @@ class producto_VI
                             document.querySelector('#id_marca' + id_producto).value = id_marca;
                             document.querySelector('#id_categoria' + id_producto).value = id_categoria;
                             
-                        
+                            $.post('producto_VI/agregarProducto', function(respuesta) {
+                          $('#contenido').html(respuesta);
+                           });
                             toastr.success(respuesta.mensaje);
 
                         } else if (respuesta.estado = 'ERROR') {
