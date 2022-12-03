@@ -116,7 +116,7 @@ class detalle_entrada_VI
                 </div>
                 <div class="card-body">
                    <div class="table-responsive">
-                    <table  class="table table-striped table-bordered" style="width:100%">
+                    <table  id="example1" class="table table-bordered table-sm table-hover" style="width:100%">
                         <thead class="thead-light">
                             <tr>
                                 <th style="text-align: center;">codigo detalle</th>
@@ -174,7 +174,7 @@ class detalle_entrada_VI
                     </div>
                 </div>
             </div>
-        <script type="text/javascript" src="datatables/main.js"></script>
+            <script type="text/javascript" src="datatables/ent.js"></script>
 
         <script>
            
