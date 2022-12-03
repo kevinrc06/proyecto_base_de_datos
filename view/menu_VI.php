@@ -61,7 +61,7 @@ class menu_VI
               <div class="clearfix"></div>
 
               <!-- menu profile quick info -->
-              <div class="profile clearfix">
+              <div class="profile clearfix" >
                 <div class="profile_pic">
                   <img src="production/images/p.png" alt="..." class="img-circle profile_img">
                 </div>
