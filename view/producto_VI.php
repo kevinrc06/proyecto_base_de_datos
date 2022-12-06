@@ -85,7 +85,7 @@ class producto_VI
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label for="nombre_producto">Nombre producto</label>
-                                <input onkeypress="return sololetras(event)" type="text" class="form-control" id="nombre_producto" name="nombre_producto">
+                                <input  type="text" class="form-control" id="nombre_producto" name="nombre_producto">
 
                             </div>
                         </div>
@@ -106,7 +106,7 @@ class producto_VI
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label for="descripcion_producto">descripcion</label>
-                                <input onkeypress="return sololetras(event)" type="text" class="form-control" id="descripcion_producto" name="descripcion_producto">
+                                <input  type="text" class="form-control" id="descripcion_producto" name="descripcion_producto">
 
                             </div>
                         </div>
@@ -327,7 +327,7 @@ class producto_VI
 
                                     <div class="form-group">
                                         <label for="nombre_producto">nombre producto</label>
-                                        <input onkeypress="return sololetras(event)"  type="text" class="form-control" id="nombre_producto" name="nombre_producto"
+                                        <input   type="text" class="form-control" id="nombre_producto" name="nombre_producto"
                                             value="${nombre_producto}">
                                     </div>
                                     <div class="form-group">
