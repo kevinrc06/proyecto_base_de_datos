@@ -42,7 +42,7 @@ class suministro_VI
                                 if ($arreglo_productos) {
 
                                     foreach ($arreglo_productos as $objeto_producto) {
-                                        $id_producto = $objeto_producto->id_marca;
+                                        $id_producto = $objeto_producto->id_producto;
                                         $nombre_producto = $objeto_producto->nombre_producto;
 
                                 ?>
